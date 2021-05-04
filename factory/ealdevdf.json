@@ -1,0 +1,9 @@
+{
+	"name": "ealdevdf",
+	"location": "westus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7e23296a-dbbd-4a0d-bb54-63b2a2dc5766",
+		"tenantId": "b8af7b6a-43dc-4bb4-91e1-4b08c7fd7408"
+	}
+}
