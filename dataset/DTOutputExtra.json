@@ -5,11 +5,26 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "TCN_OUT_X_"
+			},
+			"Timestamp": {
+				"type": "string",
+				"defaultValue": "@pipeline().TriggerTime"
+			},
+			"FileExtension": {
+				"type": "string",
+				"defaultValue": ".TCN"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "@concat(dataset().FileName,dataset().Timestamp,dataset().FileExtension)",
 				"container": "radixx"
 			},
 			"columnDelimiter": ",",
