@@ -24,7 +24,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "@concat(dataset().FileName,dataset().Timestamp,dataset().FileExtension)",
 				"container": "radixx"
 			},
 			"columnDelimiter": ",",
