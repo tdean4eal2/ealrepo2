@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "TEST_TCN_2.TCN",
 				"container": "radixx"
 			},
 			"columnDelimiter": ",",
