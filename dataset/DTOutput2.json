@@ -11,7 +11,8 @@
 				"defaultValue": "TCN_OUT_3_"
 			},
 			"Timestamp": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@pipeline().TriggerTime"
 			},
 			"FileExtension": {
 				"type": "string",
