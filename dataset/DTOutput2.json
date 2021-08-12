@@ -24,6 +24,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": "Output",
 				"container": "radixx"
 			},
 			"columnDelimiter": ",",
