@@ -1,0 +1,28 @@
+{
+	"name": "map1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DTOutput1",
+						"type": "DatasetReference"
+					},
+					"name": "FixedTCN1"
+				}
+			],
+			"sinks": [
+				{
+					"name": "TCN1CSV"
+				}
+			],
+			"transformations": [
+				{
+					"name": "MapFields1"
+				}
+			],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> FixedTCN1\nFixedTCN1 derive() ~> MapFields1\nMapFields1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> TCN1CSV"
+		}
+	}
+}
