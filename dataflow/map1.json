@@ -22,7 +22,7 @@
 					"name": "MapFields1"
 				}
 			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> FixedTCN1\nFixedTCN1 derive(RCID = substring(Column_1,1,2),\n\t\tSQNR = ERROR_FUNCTION(''),\n\t\tTDNR = ERROR_FUNCTION(''),\n\t\tCDGT = ERROR_FUNCTION(''),\n\t\tTCNR = ERROR_FUNCTION(''),\n\t\tTCND = ERROR_FUNCTION('')) ~> MapFields1\nMapFields1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> TCN1CSV"
+			"script": "parameters{\n\tRCID as string ('1,2'),\n\tSQNR as string ('3,8'),\n\tTDNR as string ('11,15'),\n\tCDGT as string ('26,1'),\n\tTCNR as string ('27,15')\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> FixedTCN1\nFixedTCN1 derive(RCID = substring(Column_1,1,2),\n\t\tSQNR = ERROR_FUNCTION(''),\n\t\tTDNR = ERROR_FUNCTION(''),\n\t\tCDGT = ERROR_FUNCTION(''),\n\t\tTCNR = ERROR_FUNCTION(''),\n\t\tTCND = ERROR_FUNCTION('')) ~> MapFields1\nMapFields1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> TCN1CSV"
 		}
 	}
 }
