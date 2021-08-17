@@ -5,25 +5,12 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"FileName": {
-				"type": "string",
-				"defaultValue": "TCN_OUT_1_"
-			},
-			"Timestamp": {
-				"type": "string",
-				"defaultValue": "@pipeline().TriggerTime"
-			},
-			"FileExtension": {
-				"type": "string",
-				"defaultValue": ".TCN"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "file_1_1.tcn",
 				"folderPath": "Output",
 				"container": "radixx"
 			},
@@ -31,6 +18,10 @@
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
 	}
 }
