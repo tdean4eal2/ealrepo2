@@ -14,6 +14,10 @@
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "Final1",
+						"type": "DatasetReference"
+					},
 					"name": "TCN1CSV"
 				}
 			],
@@ -22,7 +26,7 @@
 					"name": "MapFields1"
 				}
 			],
-			"script": "parameters{\n\tRCID as string ('1,2'),\n\tSQNR as string ('3,8'),\n\tTDNR as string ('11,15'),\n\tCDGT as string ('26,1'),\n\tTCNR as string ('27,15'),\n\tTCND as string ('42,1'),\n\tTRNC as string ('43,4'),\n\tFNDT as string ('47,1'),\n\tRTYP as string ('48,1'),\n\tINTR1 as string ('49,351')\n}\nsource(output(\n\t\tColumn_1 as string\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tignoreNoFilesFound: false) ~> FixedTCN1\nFixedTCN1 derive(RCID = substring(Column_1,toInteger(split($RCID,',')[1]),toInteger(split($RCID,',')[2])),\n\t\tSQNR = substring(Column_1,toInteger(split($SQNR,',')[1]),toInteger(split($SQNR,',')[2])),\n\t\tTDNR = substring(Column_1,toInteger(split($TDNR,',')[1]),toInteger(split($TDNR,',')[2])),\n\t\tCDGT = substring(Column_1,toInteger(split($CDGT,',')[1]),toInteger(split($CDGT,',')[2])),\n\t\tTCNR = substring(Column_1,toInteger(split($TCNR,',')[1]),toInteger(split($TCNR,',')[2])),\n\t\tTCND = substring(Column_1,toInteger(split($TCND,',')[1]),toInteger(split($TCND,',')[2])),\n\t\tTRNC = substring(Column_1,toInteger(split($TRNC,',')[1]),toInteger(split($TRNC,',')[2])),\n\t\tFNDT = substring(Column_1,toInteger(split($FNDT,',')[1]),toInteger(split($FNDT,',')[2])),\n\t\tRTYP = substring(Column_1,toInteger(split($RTYP,',')[1]),toInteger(split($RTYP,',')[2])),\n\t\tINTR1 = substring(Column_1,toInteger(split($INTR1,',')[1]),toInteger(split($INTR1,',')[2]))) ~> MapFields1\nMapFields1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> TCN1CSV"
+			"script": "parameters{\n\tRCID as string ('1,2'),\n\tSQNR as string ('3,8'),\n\tTDNR as string ('11,15'),\n\tCDGT as string ('26,1'),\n\tTCNR as string ('27,15'),\n\tTCND as string ('42,1'),\n\tTRNC as string ('43,4'),\n\tFNDT as string ('47,1'),\n\tRTYP as string ('48,1'),\n\tINTR1 as string ('49,351')\n}\nsource(output(\n\t\tColumn_1 as string\n\t),\n\tallowSchemaDrift: false,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tignoreNoFilesFound: false) ~> FixedTCN1\nFixedTCN1 derive(RCID = substring(Column_1,toInteger(split($RCID,',')[1]),toInteger(split($RCID,',')[2])),\n\t\tSQNR = substring(Column_1,toInteger(split($SQNR,',')[1]),toInteger(split($SQNR,',')[2])),\n\t\tTDNR = substring(Column_1,toInteger(split($TDNR,',')[1]),toInteger(split($TDNR,',')[2])),\n\t\tCDGT = substring(Column_1,toInteger(split($CDGT,',')[1]),toInteger(split($CDGT,',')[2])),\n\t\tTCNR = substring(Column_1,toInteger(split($TCNR,',')[1]),toInteger(split($TCNR,',')[2])),\n\t\tTCND = substring(Column_1,toInteger(split($TCND,',')[1]),toInteger(split($TCND,',')[2])),\n\t\tTRNC = substring(Column_1,toInteger(split($TRNC,',')[1]),toInteger(split($TRNC,',')[2])),\n\t\tFNDT = substring(Column_1,toInteger(split($FNDT,',')[1]),toInteger(split($FNDT,',')[2])),\n\t\tRTYP = substring(Column_1,toInteger(split($RTYP,',')[1]),toInteger(split($RTYP,',')[2])),\n\t\tINTR1 = substring(Column_1,toInteger(split($INTR1,',')[1]),toInteger(split($INTR1,',')[2]))) ~> MapFields1\nMapFields1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tRCID as string,\n\t\tSQNR as string,\n\t\tTDNR as string,\n\t\tCDGT as string,\n\t\tTCNR as string,\n\t\tTCND as string,\n\t\tTRNC as string,\n\t\tFNDT as string,\n\t\tRTYP as string,\n\t\tINTR1 as string\n\t),\n\tfilePattern:'TCN_Final_1_[n].csv',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> TCN1CSV"
 		}
 	}
 }
