@@ -1,0 +1,64 @@
+{
+	"name": "Final1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Final",
+				"container": "radixx"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "RCID",
+				"type": "String"
+			},
+			{
+				"name": "SQNR",
+				"type": "String"
+			},
+			{
+				"name": "TDNR",
+				"type": "String"
+			},
+			{
+				"name": "CDGT",
+				"type": "String"
+			},
+			{
+				"name": "TCNR",
+				"type": "String"
+			},
+			{
+				"name": "TCND",
+				"type": "String"
+			},
+			{
+				"name": "TRNC",
+				"type": "String"
+			},
+			{
+				"name": "FNDT",
+				"type": "String"
+			},
+			{
+				"name": "RTYP",
+				"type": "String"
+			},
+			{
+				"name": "INTR1",
+				"type": "String"
+			}
+		]
+	}
+}
