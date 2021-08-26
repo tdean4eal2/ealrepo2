@@ -58,6 +58,298 @@
 			{
 				"name": "INTR1",
 				"type": "String"
+			},
+			{
+				"name": "FVIN",
+				"type": "String"
+			},
+			{
+				"name": "TKMI",
+				"type": "String"
+			},
+			{
+				"name": "CJCP",
+				"type": "String"
+			},
+			{
+				"name": "CREL",
+				"type": "String"
+			},
+			{
+				"name": "CTOT",
+				"type": "String"
+			},
+			{
+				"name": "CPTK",
+				"type": "String"
+			},
+			{
+				"name": "CPUI",
+				"type": "String"
+			},
+			{
+				"name": "ATKT",
+				"type": "String"
+			},
+			{
+				"name": "RPSI",
+				"type": "String"
+			},
+			{
+				"name": "PNRR",
+				"type": "String"
+			},
+			{
+				"name": "SUDA",
+				"type": "String"
+			},
+			{
+				"name": "FILL1",
+				"type": "String"
+			},
+			{
+				"name": "PXNM",
+				"type": "String"
+			},
+			{
+				"name": "DAIS",
+				"type": "String"
+			},
+			{
+				"name": "TIOT",
+				"type": "String"
+			},
+			{
+				"name": "AGTN",
+				"type": "String"
+			},
+			{
+				"name": "AREI",
+				"type": "String"
+			},
+			{
+				"name": "NRCT",
+				"type": "String"
+			},
+			{
+				"name": "NRMI",
+				"type": "String"
+			},
+			{
+				"name": "TIIS",
+				"type": "String"
+			},
+			{
+				"name": "RDII",
+				"type": "String"
+			},
+			{
+				"name": "CLID",
+				"type": "String"
+			},
+			{
+				"name": "BEOT",
+				"type": "String"
+			},
+			{
+				"name": "BOON",
+				"type": "String"
+			},
+			{
+				"name": "BISO",
+				"type": "String"
+			},
+			{
+				"name": "POSA",
+				"type": "String"
+			},
+			{
+				"name": "POIS",
+				"type": "String"
+			},
+			{
+				"name": "TISO1",
+				"type": "String"
+			},
+			{
+				"name": "SCNF1",
+				"type": "String"
+			},
+			{
+				"name": "SCNT1",
+				"type": "String"
+			},
+			{
+				"name": "ALTP",
+				"type": "String"
+			},
+			{
+				"name": "ALNC",
+				"type": "String"
+			},
+			{
+				"name": "TISO2",
+				"type": "String"
+			},
+			{
+				"name": "SCNF2",
+				"type": "String"
+			},
+			{
+				"name": "SCNT2",
+				"type": "String"
+			},
+			{
+				"name": "PLAT",
+				"type": "String"
+			},
+			{
+				"name": "AGRE",
+				"type": "String"
+			},
+			{
+				"name": "PVDR",
+				"type": "String"
+			},
+			{
+				"name": "ACOS",
+				"type": "String"
+			},
+			{
+				"name": "INTR2",
+				"type": "String"
+			},
+			{
+				"name": "FILL2",
+				"type": "String"
+			},
+			{
+				"name": "FVFT1",
+				"type": "String"
+			},
+			{
+				"name": "FVFT2",
+				"type": "String"
+			},
+			{
+				"name": "FVFT3",
+				"type": "String"
+			},
+			{
+				"name": "FVFT4",
+				"type": "String"
+			},
+			{
+				"name": "FVFT5",
+				"type": "String"
+			},
+			{
+				"name": "FVFT6",
+				"type": "String"
+			},
+			{
+				"name": "FVFT7",
+				"type": "String"
+			},
+			{
+				"name": "FVFT8",
+				"type": "String"
+			},
+			{
+				"name": "FVFT9",
+				"type": "String"
+			},
+			{
+				"name": "FVFT10",
+				"type": "String"
+			},
+			{
+				"name": "BAID",
+				"type": "String"
+			},
+			{
+				"name": "INLS",
+				"type": "String"
+			},
+			{
+				"name": "STAT",
+				"type": "String"
+			},
+			{
+				"name": "RTIT",
+				"type": "String"
+			},
+			{
+				"name": "FCRI",
+				"type": "String"
+			},
+			{
+				"name": "ETKI",
+				"type": "String"
+			},
+			{
+				"name": "NOTE",
+				"type": "String"
+			},
+			{
+				"name": "ADTG",
+				"type": "String"
+			},
+			{
+				"name": "FILL3",
+				"type": "String"
+			},
+			{
+				"name": "DATA",
+				"type": "String"
+			},
+			{
+				"name": "VOIN",
+				"type": "String"
+			},
+			{
+				"name": "ESAC",
+				"type": "String"
+			},
+			{
+				"name": "ATCS",
+				"type": "String"
+			},
+			{
+				"name": "TACN",
+				"type": "String"
+			},
+			{
+				"name": "ISOC",
+				"type": "String"
+			},
+			{
+				"name": "SASI",
+				"type": "String"
+			},
+			{
+				"name": "EINV",
+				"type": "String"
+			},
+			{
+				"name": "EEND",
+				"type": "String"
+			},
+			{
+				"name": "EREF",
+				"type": "String"
+			},
+			{
+				"name": "TKOF",
+				"type": "String"
+			},
+			{
+				"name": "CONS",
+				"type": "String"
+			},
+			{
+				"name": "FVDT",
+				"type": "String"
 			}
 		]
 	}
